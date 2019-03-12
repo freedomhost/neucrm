@@ -1,0 +1,136 @@
+[
+	
+	{
+		"title": "营销管理",
+		"icon": "&#xe621;",
+		"href": "",
+		"spread": true,
+		"children": [
+		{
+			"title": "销售机会管理",
+			"icon": "&#xe621;",
+			"href": "/pages/sale/list.html",
+			"spread": true
+		},
+		{
+			"title": "客户开发计划",
+			"icon": "&#xe621;",
+			"href": "/pages/marketingManagement/list.html",
+			"spread": true
+		}]
+	},
+	{
+		"title": "客户管理",
+		"icon": "&#xe770;",
+		"href": "",
+		"spread": false,
+		"children": [
+		{
+			"title": "客户信息管理",
+			"icon": "&#xe770;",
+			"href": "customer/list.html",
+			"spread": false
+		},
+		{
+			"title": "客户流失管理",
+			"icon": "&#xe770;",
+			"href": "customer/loss.html",
+			"spread": false
+		}]
+	},
+	{
+		"title": "服务管理",
+		"icon": "&#xe606;",
+		"href": "",
+		"spread": false,
+		"children": [
+		{
+			"title": "服务创建",
+			"icon": "&#xe606;",
+			"href": "serviceManagement/newService.html",
+			"spread": false
+		},
+		{
+			"title": "服务分配",
+			"icon": "&#xe606;",
+			"href": "serviceManagement/assignService.html",
+			"spread": false
+		},
+		{
+			"title": "服务处理",
+			"icon": "&#xe606;",
+			"href": "serviceManagement/handleService.html",
+			"spread": false
+		},
+		{
+			"title": "服务反馈",
+			"icon": "&#xe606;",
+			"href": "service/list.html",
+			"spread": false
+		},
+		{
+			"title": "服务归档",
+			"icon": "&#xe606;",
+			"href": "service/list2.html",
+			"spread": false
+		}]
+	},
+	{
+		"title": "统计报表",
+		"icon": "&#xe609;",
+		"href": "",
+		"spread": false,
+		"children": [
+		{
+			"title": "客户贡献分析",
+			"icon": "icon-text",
+			"href": "/pages/analyse/analContribution.html",
+			"spread": false
+		},
+		{
+			"title": "客户构成分析",
+			"icon": "icon-text",
+			"href": "/pages/analyse/analConstitute.html",
+			"spread": false
+		},
+		{
+			"title": "客户服务分析",
+			"icon": "icon-text",
+			"href": "/pages/analyse/analService.html",
+			"spread": false
+		},
+		{
+			"title": "客户流失分析",
+			"icon": "icon-text",
+			"href": "/pages/analyse/analLoss.html",
+			"spread": false
+		}]
+	},
+	{
+		"title": "基础数据",
+		"icon": "&#xe620;",
+		"href": "",
+		"spread": false,
+		"children": [
+		{
+			"title": "数据字典管理",
+			"icon": "&#xe620;",
+			"href": "/pages/baseDate/dataDict.html",
+			"spread": false
+		},
+		{
+			"title": "查询产品信息",
+			"icon": "&#xe620;",
+			"href": "/pages/baseDate/product.html",
+			"spread": false
+		},
+		{
+			"title": "查询库存",
+			"icon": "&#xe620;",
+			"href": "/pages/baseDate/stock.html",
+			"spread": false
+		}]
+	}
+	
+]
+

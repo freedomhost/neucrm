@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务反馈</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/service/fkshow.css" media="all" />
+</head>
+<body class="childrenBody">
+<div class="show">
+    <blockquote><h2>服务归档查看</h2></blockquote>
+    <form id="customer"class = layui-form target="rfFrame">
+        <iframe id="rfFrame" name="rfFrame" src="about:blank"></iframe>
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="20%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td class="bg-eee">编号:</td>
+                <td><input id="id" readonly name="id" type="text" autocomplete="off" class="layui-input"/>
+                </td>
+                <td class="bg-eee"></td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">服务类型:</td>
+                <td><input id="serviceTypeTitle" readonly name="serviceTypeTitle" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+
+                <td class="bg-eee">概要:</td>
+                <td><input id="outline" readonly name="outline" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="bg-eee">客户:</td>
+                <td><input id="customerName" readonly name="customerName" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+                <td class="bg-eee">状态:</td>
+                <td><input id="statusTitle" readonly name="statusTitle" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">服务请求:</td>
+                <td><input id="serviceReq" readonly name="serviceReq" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+                <td class="bg-eee">
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">创建人:</td>
+                <td><input id="creationName" readonly name="creationName" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+                <td class="bg-eee">创建时间:</td>
+                <td><input id="creationTime" readonly name="creationTime" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="20%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td class="bg-eee">负责经理:</td>
+                <td><input id="userIdName" readonly name="userIdName"  type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+                <td class="bg-eee">分配时间:</td>
+                <td><input id="allotTime" name="allotTime"   readonly  type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="20%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td class="bg-eee">服务处理:</td>
+                <td colspan="3"><input id="serviceHandle" readonly name="serviceHandle" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="bg-eee">处理人:</td>
+                <td><input id="handleName" readonly name="handleName" type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+                <td class="bg-eee">处理时间:</td>
+                <td><input id="handleTime" readonly type="text" autocomplete="off" class="layui-input" value="0"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">处理结果:</td>
+                <td>
+                    <input id="handleResult"  readonly name="handleResult" type="text"  autocomplete="off" class="layui-input"/>
+                    <span>*</span>
+                </td>
+                <td class="bg-eee">满意度:</td>
+                <td>
+                    <input id="satisfaction" readonly name="satisfaction" type="text"  autocomplete="off" class="layui-input"/>
+                    <span>*</span>
+                </td>
+            </tr>
+            </tbody>
+            <input id="serviceId" hidden name="serviceId" type="text"   />
+        </table>
+
+
+        <a href="list2.html" class="layui-btn">
+            <i class="layui-icon">&#xe65c;</i>返回</a>
+    </div>
+    </form>
+
+</div>
+</body>
+<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/service/gdshow.js" type="text/javascript" charset="utf-8"></script>
+</html>

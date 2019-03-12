@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!--Controller注解扫描-->
+    <context:component-scan base-package="com.neusoft.controller" />
+    <!--注册自定义拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/system-user/login" />
+            <mvc:exclude-mapping path="/pages/login.html" />
+            <mvc:exclude-mapping path="/static/**" />
+            <!--<ref bean="loginInterceptor" />-->
+            <bean id="loginInterceptor" class="com.neusoft.intercerptor.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--静态资源处理-->
+    <mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:resources mapping="/pages/**" location="/pages/" />
+    <mvc:annotation-driven />
+
+
+
+</beans>

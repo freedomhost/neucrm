@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.OrderHistoryMapper">
+  <select id="orderAndLoss" resultType="com.neusoft.entity.vo.OrderAndCustomerVo">
+     SELECT * from customer_info where customer_id not in(SELECT customer_id from customer_loss);
+  </select>
+    <select id="newTime" resultType="com.neusoft.entity.vo.OrderAndCustomerVo">
+                SELECT *
+        FROM order_history
+        where  customer_id = #{id}
+        ORDER BY order_time DESC LIMIT 0,1
+    </select>
+    <select id="orderHis" resultType="com.neusoft.entity.vo.OrderAndCustomerVo">
+         SELECT *
+        FROM order_history
+        where  customer_id = #{cid}
+        ORDER BY order_time DESC
+    </select>
+</mapper>

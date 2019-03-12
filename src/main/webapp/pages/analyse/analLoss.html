@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户流失分析</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!--<link rel="icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/index.css" media="all" />
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <b>客户名称</b>
+        </div>
+        <div class="layui-input-inline">
+            <input type="search" placeholder="" autocomplete="off" name="customerName" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <b>客户经理</b>
+        </div>
+        <div class="layui-input-inline">
+            <input type="search" placeholder="" autocomplete="off" name="customerMgr" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <a class="layui-btn" lay-submit lay-filter="search">查询</a>
+        </div>
+    </form>
+</blockquote>
+<table id="lossList" lay-filter="losssList"></table>
+<script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+<script type="text/javascript" src="../../static/js/analyse/analLoss.js"></script>
+</body>
+</html>

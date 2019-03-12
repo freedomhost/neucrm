@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户联系人</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/contactRecord/save-edit.css" media="all" />
+</head>
+<body class="childrenBody">
+    <form id="contactRecord" class="layui-form">
+        <table class="layui-table">
+            <colgroup>
+                <col width="15%">
+                <col width="35%">
+                <col width="15%">
+                <col width="35%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <input id="id" name="id"/>
+                    <td class="bg-eee">
+                        时间:
+                    </td>
+                    <td >
+                        <input id="contactTime" name="contactTime" class="layui-input" autocomplete="off" type="text"  required lay-verify="required" placeholder="yyyy-MM-dd"/>
+                        <span>*</span>
+                    </td>
+                    <td class="bg-eee">
+                        地点:
+                    </td>
+                    <td>
+                        <input id="place" name="place" class="layui-input" autocomplete="off" type="text"  required lay-verify="required" placeholder="请输入交往地点"/>
+                        <span>*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-eee">
+                        概要:
+                    </td>
+                    <td>
+                        <input id="outline" name="outline" class="layui-input" autocomplete="off" type="text" required lay-verify="required" placeholder="请输入概要"/>
+                        <span>*</span>
+                    </td>
+                    <td class="bg-eee">
+                        备注:
+                    </td>
+                    <td>
+                        <input id="remarks" name="remarks" class="layui-input" autocomplete="off" type="text" placeholder="请输入备注"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-eee">
+                        详细内容:
+                    </td>
+                    <td colspan="3" class="layui-form-text">
+                        <textarea id="detailedInfo" name="detailedInfo" placeholder="请输入详细内容" class="layui-textarea"></textarea>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <button class="layui-btn save-btn" lay-submit lay-filter="save-btn">
+            <i class="layui-icon">&#xe62f;</i>保存</button>
+    </form>
+</body>
+    <script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/contactRecord/save-edit.js" type="text/javascript" charset="utf-8"></script>
+</html>

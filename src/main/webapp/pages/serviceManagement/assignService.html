@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>服务分配列表</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <style>
+        #refur {float:right}
+        h2 {display: inline-block;line-height: 38px}
+        blockquote{height: 38px}
+    </style>
+</head>
+<body class="childrenBody">
+
+<blockquote class="layui-elem-quote" >
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="search" placeholder="编号 客户 服务类型 负责经理 创建人" autocomplete="off" style="width: 500px" required lay-verify="required" name="search" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+         <!--   <a class="layui-btn" lay-submit lay-filter="search">查询</a>-->
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="search">
+                <i class="layui-icon">&#xe615;</i>查询</button>
+            <button id="refur" type="reset" class="layui-btn layui-btn-primary">
+                <i class="layui-icon">&#xe666;</i>刷新</button>
+        </div>
+    </form>
+
+
+</blockquote>
+
+<table id="assignService" lay-filter="assignService" ></table>
+
+<script type="text/html" id="AssignTool">
+    <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="assign_btn">分配</a>
+</script>
+
+<script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/js/serviceManagement/assignService.js"></script>
+</body>
+</html>

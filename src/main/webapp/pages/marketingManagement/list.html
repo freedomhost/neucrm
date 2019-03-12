@@ -1,0 +1,32 @@
+<html>
+<head>
+    <base href="<%=basePath%>"/>
+    <title>用户列表</title>
+    <link rel="stylesheet" href="/static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="search" placeholder="请输入查询条件" autocomplete="off" name="search" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <a class="layui-btn" lay-submit lay-filter="search">查询</a>
+        </div>
+        <div class="layui-input-inline"></div>
+    </form>
+</blockquote>
+
+<table id="marketList" lay-filter="marketList"></table>
+
+<script type="text/html" id="marketTool">
+    <a class="layui-btn layui-btn-primary layui-btn-xs layui-btn-warm" lay-event="look_btn">查看计划项</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs layui-btn-warm" id="deleteId" lay-event="delete_btn">删除客户记录</a>
+</script>
+<script src="/static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/static/js/marketingManagement/market.js"></script>
+</body>
+</html>

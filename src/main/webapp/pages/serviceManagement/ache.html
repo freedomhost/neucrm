@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>服务分配</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/costomer/show.css" media="all" />
+</head>
+<body class="childrenBody">
+<div class="show">
+    <blockquote class="layui-elem-quote">
+        <div class="c">
+
+
+
+        </div>
+
+    </blockquote>
+    <form id="customer"class = layui-form target="rfFrame">
+        <iframe id="rfFrame" name="rfFrame" src="about:blank"></iframe>
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="20%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td class="bg-eee">编号:</td>
+                <td>
+                <input type="text" readonly id="serviceId"  name="serviceId" autocomplete="off" class="layui-input" />
+                </td>
+                <td class="bg-eee">服务类型:</td>
+                <td>
+                    <input type="text" readonly name="serviceType" id="serviceType"  autocomplete="off" class="layui-input" />
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">客户:</td>
+                <td> <input type="text" readonly id="customerName" name="customerName" autocomplete="off" class="layui-input" />
+                </td>
+
+                <td class="bg-eee">概要:</td>
+                <td>
+                    <input type="text" name="outline" id="outline"   autocomplete="off" class="layui-input" />
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee" >服务请求:</td>
+                <td colspan="3">
+                <input type="text" readonly name="serviceReq" id="serviceReq" autocomplete="off" class="layui-input" />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="bg-eee">创建人:</td>
+                <td><input type="text" readonly id="creationName" name="creationName" autocomplete="off" class="layui-input" />
+                </td>
+                <td class="bg-eee">创建时间:</td>
+                <td>
+                    <input type="text" readonly name="creationTime" id="creationTime"  autocomplete="off" class="layui-input" />
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+        <div class="layui-input-block" style="float: right">
+        <table width="300px">
+            <tr>
+
+                <td >
+                    <div>
+                        <button class="layui-btn save-btn" lay-submit lay-filter="save-btn">
+                            <i class="layui-icon">&#xe62f;</i>保存</button>
+                    </div>
+                </td>
+                <td >
+                    <div>
+                        <a href="assignService.html" class="layui-btn layui-btn-primary fr">
+                            <i class="layui-icon">&#xe65c;</i>返回</a>
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+        </div>
+    </form>
+
+</div>
+</body>
+<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/serviceManagement/assign.js" type="text/javascript" charset="utf-8"></script>
+</html>

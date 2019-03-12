@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../static/css/public.css" media="all" />
+	<link rel="stylesheet" href="../../static/css/sale/list.css"  />
+</head>
+<body class="childrenBody">
+	<form id="soptunity" class="layui-form">
+		<table class="layui-table">
+			<colgroup>
+				<col width="15%">
+				<col width="35%">
+				<col width="15%">
+				<col width="35%">
+			</colgroup>
+			<tbody>
+					<tr>
+						<td>编号</td> <td><input type="text" id="id" name="id" autocomplete="off"  required lay-verify="required" class="layui-input" readonly/></td>
+						<td>机会来源</td> <td><input type="text" id="opportunitySource" name="opportunitySource" autocomplete="off"  class="layui-input" readonly/></td>
+					</tr>
+
+					<tr>
+						<td>客户名称</td> <td> <input type="text" id="name" name="name" class="layui-input" readonly/></td>
+						<td>成功概率(%)</td> <td><input type="text" id="successProbability" name="successProbability" class="layui-input" readonly/></td>
+					</tr>
+
+					<tr>
+						<td>联系人</td> <td> <input type="text" id="contacts" name="contacts" class="layui-input" readonly/></td>
+						<td>联系人电话</td> <td><input type="text" id="contactsTel" name="contactsTel" class="layui-input" readonly/></td>
+					</tr>
+
+					<tr>
+						<td>创建人</td> <td> <input type="text" name="foundName" id="foundName" class="layui-input" readonly/></td>
+						<td>
+							创建时间
+						</td>
+						<td>
+							<input type="text" name="creationTime" id="creationTime" required  lay-verify="required" autocomplete="off" class="layui-input" readonly/>
+						</td>
+					</tr>
+
+					<tr>
+						<td>机会描述</td>
+						<td><textarea  id="opportunityDesc"  name="opportunityDesc" class="layui-textarea" readonly></textarea></td>
+						<td>概要</td> <td><input type="text" id="outline" name="outline" style="border:0px;outline:none;" class="layui-input" readonly/></td>
+					</tr>
+
+			        <tr>
+						<td>指派给</td>
+						<td>
+							<input type="hidden" id="hidName" name="hidName"/>
+							<select name="city" id="assignName" name="assignName">
+								<option value=""></option>
+							</select>
+						</td>
+						<td>
+							指派时间
+						</td>
+						<td>
+							<input type="text" name="assignTime" id="assignTime" required  lay-verify="required" autocomplete="off" class="layui-input" placeholder="yyyy-MM-dd HH:mm:ss"/>
+						</td>
+					</tr>
+
+					<tr id="str">
+						<td id="sbtn" colspan="4">
+							<button class="layui-btn save-btn" lay-submit lay-filter="save-btn">
+								<i class="layui-icon">&#xe62f;</i>保存</button>
+						</td>
+					</tr>
+			</tbody>
+
+		</table>
+
+	</form>
+</body>
+
+ <script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+ <script type="text/javascript" src="../../static/js/sale/assign.js" charset="utf-8"></script>
+
+</html>

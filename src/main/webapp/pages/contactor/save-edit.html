@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户联系人</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/contactor/save-edit.css" media="all" />
+</head>
+<body class="childrenBody">
+    <form id="contactor" class="layui-form">
+        <table class="layui-table">
+            <colgroup>
+                <col width="15%">
+                <col width="35%">
+                <col width="15%">
+                <col width="35%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <input id="id" name="id"/>
+                    <td class="bg-eee">
+                        姓名:
+                    </td>
+                    <td >
+                        <input id="name" name="name" class="layui-input" autocomplete="off" type="text"  required lay-verify="required" placeholder="请输入联系人姓名"/>
+                        <span>*</span>
+                    </td>
+                    <td class="bg-eee">
+                        性别:
+                    </td>
+                    <td>
+                        <input id="sex-f" type="radio" name="sex" value="男" title="男" checked>
+                        <input id="sex-m" type="radio" name="sex" value="女" title="女" >
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-eee">
+                        职位:
+                    </td>
+                    <td>
+                        <input id="job" name="job" class="layui-input" autocomplete="off" type="text" required lay-verify="required" placeholder="请输入联系人职位"/>
+                        <span>*</span>
+                    </td>
+                    <td class="bg-eee">
+                        办公电话:
+                    </td>
+                    <td>
+                        <input id="phone" name="phone" class="layui-input" autocomplete="off" type="text"  required lay-verify="tel|required" placeholder="请输入联系人办公电话"/>
+                        <span>*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-eee">
+                        手机:
+                    </td>
+                    <td>
+                        <input id="tel" name="tel" class="layui-input" autocomplete="off" type="number" placeholder="请输入联系人手机"/>
+                    </td>
+                    <td class="bg-eee">
+                        备注:
+                    </td>
+                    <td>
+                        <input id="remark" name="remark" class="layui-input" autocomplete="off" type="text"  placeholder="请输入备注"/>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+        <button class="layui-btn save-btn" lay-submit lay-filter="save-btn">
+            <i class="layui-icon">&#xe62f;</i>保存</button>
+    </form>
+</body>
+    <script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/contactor/save-edit.js" type="text/javascript" charset="utf-8"></script>
+</html>

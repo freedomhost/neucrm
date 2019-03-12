@@ -1,0 +1,66 @@
+<html>
+<head>
+    <base href="<%=basePath%>"/>
+    <title>用户编辑</title>
+    <link rel="stylesheet" href="/static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/css/public.css" media="all" />
+    <style>
+        #save-btn {
+            margin-left: 43%;
+            margin-top: 50px;
+        }
+
+    </style>
+   </head>
+<body class="childrenBody padr30">
+<form class="layui-form" action="" id="market_edit" method="get">
+    <table>
+    <div class="layui-form-item">
+        <label class="layui-form-label">销售机会编号</label>
+        <div class="layui-input-block">
+            <input type="text" readonly id="opportunityId" name="opportunityId" required  lay-verify="required" autocomplete="off" class="layui-input" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">计划时间</label>
+        <div class="layui-input-block">
+            <input type="datetime" id="planTime" name="planTime" required lay-verify="required" class="layui-input" autocomplete="off">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">计划项</label>
+        <div class="layui-input-block">
+            <input type="text" name="planItem" lay-verify="required"  autocomplete="off" class="layui-input" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">创建人</label>
+        <div class="layui-input-block">
+            <input id="founder" readonly type="text" name="founder" required  lay-verify="required" autocomplete="off" class="layui-input" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">创建人编号</label>
+        <div class="layui-input-block">
+            <input id="foundId" readonly type="text" name="foundId" required  lay-verify="required" autocomplete="off" class="layui-input" />
+        </div>
+    </div>
+    </table>
+    <button id="save-btn" class="layui-btn save-btn" lay-submit lay-filter="save-btn"><i class="layui-icon">&#xe62f;</i>保存</button>
+</form>
+
+<script type="text/javascript" src="/static/commons/layui/layui.js"></script>
+<script>
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+        laydate.render({
+            elem: '#planTime'
+            , type: 'datetime'
+            , format: 'yyyy-MM-dd HH:mm:ss'
+            , min: 0
+        });
+    })
+</script>
+<script type="text/javascript" src="/static/js/marketingManagement/edit.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>客户交往记录</title>
+		<link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="../../static/css/public.css" media="all" />
+		<link rel="stylesheet" href="../../static/css/contactRecord/list.css" media="all" />
+	</head>
+	<body class="childrenBody">
+		<div class="show">
+			<blockquote class="layui-elem-quote">
+				<form class="layui-form" action="">
+					<div class="layui-input-inline">
+						<input type="search" name="search" required  lay-verify="required" placeholder="请输入查询条件" autocomplete="off" class="layui-input">
+					</div>
+					<button class="layui-btn layui-btn-normal" lay-submit lay-filter="search">
+						<i class="layui-icon">&#xe615;</i>查询</button>
+					<button id="refur" type="reset" class="layui-btn layui-btn-primary">
+					<i class="layui-icon">&#xe666;</i>刷新</button>
+					<h1>客户交往记录</h1>
+					<button id="return-btn" type="reset" class="layui-btn layui-btn-primary">
+						<i class="layui-icon">&#xe65c;</i>返回</button>
+					<button id="help-btn" type="reset" class="layui-btn layui-btn-primary">
+						<i class="layui-icon">&#xe607;</i>帮助</button>
+					<button id="add-btn" type="reset" class="layui-btn layui-btn-normal">
+						<i class="layui-icon">&#xe654;</i>新建</button>
+				</form>
+
+			</blockquote>
+			<table class="layui-table">
+				<tbody>
+				<colgroup>
+					<col width="20%">
+					<col width="30%">
+					<col width="20%">
+					<col width="30%">
+				</colgroup>
+				<tr>
+					<td class="bg-eee">客户编号</td>
+					<td><input id="customerId" readonly type="text"  class="layui-input" value="0"/>
+					</td>
+					<td class="bg-eee">客户名称</td>
+					<td><input id="customerName" readonly type="text" class="layui-input" value="FFFFFF"/>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<table id="list" class="layui-table" lay-filter="list"></table>
+		</div>
+	</body>
+	<script type="text/html" id="contactorTool">
+		<button  class="mybtn layui-btn layui-btn-xs layui-btn-warm" lay-event="edit-btn">
+			<i class="layui-icon">&#xe642;</i>编辑</button>
+		<button  class="mybtn layui-btn layui-btn-xs layui-btn-danger" lay-event="del-btn">
+			<i class="layui-icon">&#xe640;</i>删除</button>
+	</script>
+	<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/contactRecord/list.js" type="text/javascript" charset="utf-8"></script>
+</html>

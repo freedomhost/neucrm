@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.ProductMapper">
+
+    <select id="productPage" resultType="com.neusoft.entity.Product">
+        SELECT * FROM product
+        <where>
+            <if test="product.name != null and product.name != '' ">
+                name LIKE '%${product.name}%'
+            </if>
+            <if test="product.type != null and product.type != '' ">
+                OR type LIKE '%${product.type}%'
+            </if>
+            <if test="product.batch != null and product.batch != '' ">
+                OR batch LIKE '%${product.batch}%'
+            </if>
+        </where>
+    </select>
+</mapper>

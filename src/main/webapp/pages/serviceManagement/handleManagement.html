@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>服务处理解决</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+
+</head>
+<body class="childrenBody">
+
+<div style="margin: 0px auto;width: 80%;height: 80%;">
+    <blockquote class="layui-elem-quote">
+        <div class="c">
+            <h2>服务处理</h2>
+        </div>
+    </blockquote>
+    <form class="layui-form" action="" id="handleManagement">
+        <div class="layui-row"  style="margin:10px 0px;">
+
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">处理编号:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="id" id="id" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">服务类型:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="serviceTypeTitle" id="serviceTypeTitle" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+
+        </div>
+        <div class="layui-row" style="margin:10px 0px;">
+            <div class="layui-form-item" >
+                <label class="layui-form-label bg-eee">概要:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="outline" id="outline" autocomplete="off" readonly class="layui-input" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-row" style="margin:10px 0px;">
+
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">客户:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="customerName" id="customerName" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">状态:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="statusTitle" id="statusTitle"  readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+        </div>
+        <div class="layui-row" style="margin:10px 0px;">
+
+            <div class="layui-form-item" >
+                <label class="layui-form-label bg-eee">服务请求:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="serviceReq" id="serviceReq" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-row" style="margin:10px 0px;">
+
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">创建人:</label>
+                <div class="layui-input-block">
+                    <input type="text" id="creationName" name="creationName" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">创建时间:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="creationTime" id="creationTime" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+        </div>
+        <div class="layui-row" style="margin:10px 0px;">
+
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">负责经理:</label>
+                <div class="layui-input-block">
+                    <input type="text" id="userIdName" name="userIdName" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">分配时间:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="allotTime" id="allotTime" readonly autocomplete="off" class="layui-input" />
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-row" style="margin:10px 0px;">
+            <input type="text" name="serviceId" id="serviceId" hidden />
+            <div class="layui-form-item " >
+                <label class="layui-form-label bg-eee">服务处理:</label>
+                <div class="layui-input-block">
+                    <input type="text" name="serviceHandle" id="serviceHandle" lay-verify="required" autocomplete="off" class="layui-input" />
+               *
+                </div>
+
+
+            </div>
+        </div>
+       <!-- <div>
+            <input type="text" name="userId" id="userId" hidden/>
+            <input type="text" name="status" id="status" hidden/>
+            <input type="text" name="serviceType" id="serviceType" hidden/>
+        </div>-->
+        <div class="layui-row" style="margin:10px 0px;">
+
+            <div class="layui-col-md6" >
+                <label class="layui-form-label bg-eee">处理人:</label>
+                <div class="layui-input-block">
+                    <input type="text" id="handleName" name="handleName" readonly lay-verify="required" autocomplete="off" class="layui-input" />
+                    *
+                </div>
+
+            </div>
+            <div class="layui-input-block" style="float: right">
+
+                <table width="300px">
+                    <tr>
+                        <td >
+                            <div>
+                                <button class="layui-btn save-btn" lay-submit lay-filter="save-btn">
+                                    <i class="layui-icon">&#xe62f;</i>保存</button>
+                            </div>
+                        </td>
+                        <td >
+                            <div>
+                                <a href="handleService.html" class="layui-btn layui-btn-primary fr">
+                                    <i class="layui-icon">&#xe65c;</i>返回</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../static/js/serviceManagement/handleManagement.js"></script>
+</body>
+</html>

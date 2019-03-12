@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+</head>
+<body>
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="search" placeholder="产品" autocomplete="off" name="productName" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <input type="search" placeholder="仓库" autocomplete="off" name="warehouse" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <a class="layui-btn" lay-submit lay-filter="search">查询</a>
+        </div>
+    </form>
+</blockquote>
+<table id="stockList" lay-filter="stockList"></table>
+    <script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+    <script type="text/javascript" src="../../static/js/baseDate/stock.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+#div1{
+	margin-top: 40px;
+	font-size: 0;
+}
+#div1 button{
+	font-size:initial;
+	text-align: center;
+	height: 28px;
+	width: 45px;
+}
+#div2{
+	font-size: initial;
+	margin-top: 7px;
+}
+
+#table2 tr td:nth-child(odd){
+	background-color: rgb(102,204,255);
+	width: 100px;
+	text-align: center;
+	height: 30px;
+}
+#tr2 td input{
+	border: solid 4px #E5E5E5;
+	width: 150px;
+}
+#btn1{
+	position: relative;
+	margin-left: 645px;
+}
+#h3{
+	font-weight:bold;
+	font-size: 18px;
+}
+#div3{
+	position: relative;
+    margin-top: 20px ;	
+}
+
+#str{
+	background-color: white;
+}
+#sbtn{
+	text-align: center;
+	border:0px;
+	outline:none;
+}

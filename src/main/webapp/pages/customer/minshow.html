@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详细信息</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/costomer/temloss.css" media="all" />
+</head>
+<body class="childrenBody">
+<div class="temloss">
+    <blockquote class="layui-elem-quote">
+        <div class="c">
+            <a href="loss.html" class="layui-btn layui-btn-primary" id="return">
+                <i class="layui-icon">&#xe65c;</i>返回</a>
+            <a href="help.html" class="layui-btn layui-btn-primary"id="help" target="_blank">
+                <i class="layui-icon">&#xe607;</i>帮助</a>
+
+        </div>
+    </blockquote>
+    <form id="loss"class = layui-form target="rfFrame">
+        <iframe id="rfFrame" name="rfFrame" src="about:blank"></iframe>
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="30%">
+                <col width="20%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+            <tr>
+                <td class="bg-eee">编号</td>
+                <td>
+                    <input id="id" readonly name="id" type="text" class="layui-input" value="1"/>
+                </td>
+                <td class="bg-eee">客户</td>
+                <td>
+                    <input  id="customerName" readonly name="customerName" type="text" class="layui-input"/>
+                </td>
+            </tr>
+            <tr>
+
+                <td class="bg-eee">客户经理</td>
+                <td>
+                    <input  id="customerMgr" readonly name="customerMgr" type="text"  class="layui-input"/>
+                </td>
+                <td class="bg-eee">上次下单时间</td>
+                <td>
+                    <input  id="lastOrderTime" readonly type="text"  class="layui-input"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="myTable">
+            <colgroup>
+                <col width="20%">
+                <col width="80%">
+            </colgroup>
+            <tbody>
+            <tr>
+
+                <td class="bg-eee">暂缓措施</td>
+                <td>
+                    <textarea  id="pauseWay" readonly name="pauseWay" type="text"  class="layui-textarea"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">追加暂缓措施</td>
+                <td>
+                    <textarea id="addPauseWay" name="addPauseWay" readonly type="text" class="layui-textarea"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-eee">流失原因</td>
+                <td>
+                    <textarea id="lossReason" name="lossReason" readonly type="text" class="layui-textarea" ></textarea>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </form>
+
+</div>
+</body>
+<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/customer/temloss.js" type="text/javascript" charset="utf-8"></script>
+</html>

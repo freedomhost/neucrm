@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.AnalConstituteMapper">
+
+    <select id="analConstitutePage" resultType="com.neusoft.entity.vo.AnalConstituteVo">
+        select customer_id,customer_grade,customer_credit,customer_satisfaction,count(1) AS countSum FROM customer_info
+        <choose>
+            <when test="searchAnaly ==null">
+                group by customer_grade  DESC
+            </when>
+            <otherwise>
+                group by ${searchAnaly}  DESC
+            </otherwise>
+        </choose>
+    </select>
+</mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.DrawPlanMapper">
+    <select id="sdpvPage" resultType="com.neusoft.entity.vo.SaleDrawPlanVo">
+            select s.id,s.opportunity_source,s.name,s.success_probability,s.outline,s.contacts,
+            s.contacts_tel,s.opportunity_desc,s.assign_id,s.assign_name,s.assign_time,s.status,
+            s.found_id,s.found_name,s.creation_time
+            from sales_opportunity s
+            <where>
+                <if test="search !=null">
+                    s.id like '%${search}%' or
+                    s.opportunity_source like '%${search}%' or
+                    s.assign_name like '%${search}%'or
+                    s.name like '%${search}%' or
+                    s.contacts like '%${search}%' or
+                    s.contacts_tel like  '%${search}%' or
+                    s.found_name like  '%${search}%'
+                </if>
+                AND s.status IN(1,2,3)
+            </where>
+    </select>
+    <select id="dpPage" resultType="com.neusoft.entity.DrawPlan">
+        SELECT d.id,d.plan_time,d.plan_item,d.result,d.founder,d.opportunity_id,d.found_id,d.creation_time FROM draw_plan d WHERE d.opportunity_id=#{search}
+    </select>
+    <select id="so" resultType="com.neusoft.entity.SalesOpportunity">
+        SELECT s.id,s.contacts,s.contacts_tel,s.name FROM sales_opportunity s WHERE s.id=#{id}
+    </select>
+    <select id="cc" resultType="com.neusoft.entity.CustomerContact">
+        SELECT ci.customer_id,ci.customer_name FROM customer_info ci WHERE ci.customer_name=#{name}
+    </select>
+    <select id="su" resultType="com.neusoft.entity.SystemUser">
+        SELECT su.id,su.name FROM system_user su WHERE su.name=#{name}
+    </select>
+</mapper>

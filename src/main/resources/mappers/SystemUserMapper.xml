@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.SystemUserMapper">
+
+    <select id="getCustomerMgr" resultType="com.neusoft.entity.vo.SystemUserVo">
+        SELECT s.id,s.name,s.role_id FROM SYSTEM_USER s,ROLE WHERE ROLE.NAME = '客户经理' and ROLE.id = s.role_id
+    </select>
+    <select id="getUserVoById" resultType="com.neusoft.entity.vo.SystemUserVo">
+        SELECT s.id,s.name,s.log_name,s.log_pwd,r.name AS role_name,s.role_id FROM system_user s,role r
+        WHERE s.role_id = r.id and s.id = #{id}
+    </select>
+
+    <update id="updatePwd" parameterType="integer">
+        UPDATE system_user SET log_pwd = #{logPwd} where id = #{id}
+    </update>
+
+</mapper>

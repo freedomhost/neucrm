@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>查询所有</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="search" placeholder="请输入查询条件" autocomplete="off" required lay-verify="required" name="search" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <a class="layui-btn" lay-submit lay-filter="search">查询</a>
+            <a class="layui-btn layui-btn-normal add_btn">添加</a>
+        </div>
+    </form>
+</blockquote>
+
+<table id="serviceList" lay-filter="serviceList"></table>
+
+<script type="text/html" id="serviceTool">
+    <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit_btn">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del_btn">删除</a>
+</script>
+
+<script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+<script type="text/javascript" src="../../static/js/serviceManagement/service.js"></script>
+</body>
+</html>

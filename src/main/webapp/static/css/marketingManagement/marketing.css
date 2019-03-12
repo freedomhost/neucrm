@@ -1,0 +1,74 @@
+span {
+    margin: 5px auto;
+}
+.layui-col-xs3 {
+    text-align: center;
+    padding: 10px;
+}
+.show {
+    margin: 0px auto;
+    width: 80%;
+    height: 80%;
+}
+.bg-eee{
+    background-color: #bbb;
+}
+.c {
+    margin: 0 auto;
+}
+.myTable {
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 1px solid #aaa ;
+    border-left: 1px solid #aaa ;
+    border-right: 1px solid #aaa ;
+}
+.myTable td {
+    text-align: center;
+    height: 30px;
+    border-top: 1px solid #aaa ;
+
+}
+.layui-input {
+    text-align: center;
+}
+.fr {
+    float: right;
+}
+.fl {
+    float: left;
+}
+.save-btn {
+    margin: 10px 45%;
+}
+.disable {
+}
+/*去掉谷歌,火狐下的type="number"中的右边箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+input[type="number"]{-moz-appearance:textfield;}
+.layui-form-select {
+    width: 93%;
+    display: inline-block;
+}
+
+.layui-input {
+    border:0px solid #fff!important;
+    width: 93%;
+    display: inline-block;
+}
+
+td span {
+    font-size: 20px;
+    color: red;
+    border-left:1px solid #eee!important;
+}
+
+#rfFrame {
+    display:none;
+}
+select {
+    display: none;
+}

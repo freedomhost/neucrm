@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.AnalLossMapper">
+
+    <select id="analLossPage" resultType="com.neusoft.entity.vo.AnalLossVo">
+        select id,loss_time,customer_name,customer_mgr,loss_reason from customer_loss
+        <where>
+            status=1
+            <if test="customerName != null and customerName != ''">
+                AND customer_name LIKE '%${customerName}%'
+            </if>
+            <if test="customerMgr != null and customerMgr != ''">
+                AND customer_mgr LIKE '%${customerMgr}%'
+            </if>
+        </where>
+    </select>
+</mapper>

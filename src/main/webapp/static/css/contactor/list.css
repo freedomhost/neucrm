@@ -1,0 +1,30 @@
+#return-btn,#add-btn,#help-btn{
+     float: right;
+    margin-left:10px;
+}
+
+.show {
+    margin: 0px auto;
+    width: 80%;
+}
+
+input {
+    border: 0px solid #fff;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+.bg-eee {
+    background-color: #eee;
+}
+.gary-btn {
+    background-color: #aaa!important;
+}
+
+h1{
+    position: absolute;
+    left: 43%;
+    display: inline-block;
+}

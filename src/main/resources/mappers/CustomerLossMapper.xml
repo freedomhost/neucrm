@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.CustomerLossMapper">
+
+  <select id="pages" resultType="com.neusoft.entity.vo.CustomerLossVo">
+       SELECT *
+       FROM customer_loss
+
+          <if test="customer!=null or manager!=null or status!=null ">
+              WHERE <if test="customer!=null">customer_name LIKE '%${customer}%' AND </if>
+              <if test="manager!=null">customer_mgr LIKE '%${manager}%' AND </if>
+              <if test="status!=null">status LIKE '%${status}%' </if>
+          </if>
+
+  </select>
+</mapper>

@@ -1,0 +1,25 @@
+#return-btn,#help {
+    float: right;
+    margin-left: 10px;
+}
+.show {
+    margin: 0px auto;
+    width: 70%;
+}
+input {
+    border: 0px solid #fff;
+    text-align: center;
+}
+td {
+    text-align: center;
+}
+.bg-eee {
+    background-color: #eee;
+}
+blockquote {
+    height: 38px;
+
+}
+#return-btn,#help {float:right}
+h2 {display: inline-block;line-height: 38px}
+blockquote{height: 38px}

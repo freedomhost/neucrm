@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>客户信息</title>
+		<link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="../../static/css/public.css" media="all" />
+		<link rel="stylesheet" href="../../static/css/costomer/show.css" media="all" />
+	</head>
+	<body class="childrenBody">
+	<div class="show">
+		<blockquote class="layui-elem-quote">
+			<div class="c">
+					<button class="layui-btn layui-btn-normal" id="contactor-btn">
+						<i class="layui-icon">&#xe770;</i>联系人</button>
+					<button class="layui-btn layui-btn-warm" id="contactRecord-btn">
+						<i class="layui-icon">&#xe6b2;</i>交往记录</button>
+					<button class="layui-btn" id="history_btn">
+						<i class="layui-icon">&#xe60e;</i>历史订单</button>
+					<h1>客户详细信息</h1>
+					<a href="list.html" class="layui-btn layui-btn-primary fr">
+						<i class="layui-icon">&#xe65c;</i>返回</a>
+					<button id="help-btn" class="layui-btn layui-btn-primary fr">
+						<i class="layui-icon">&#xe607;</i>帮助</button>
+			</div>
+		</blockquote>
+		<h2 id="msg">你不是本负责经理,只能查看,无权进行操作</h2>
+		<form id="customer"class = layui-form target="rfFrame">
+			<fieldset id="fieldset">
+			<iframe id="rfFrame" name="rfFrame" src="about:blank"></iframe>
+			<table class="myTable">
+				<colgroup>
+					<col width="20%">
+					<col width="30%">
+					<col width="20%">
+					<col width="30%">
+				</colgroup>
+				<tbody>
+				<tr>
+					<td class="bg-eee">编号:</td>
+					<td><input id="customerId" readonly name="customerId" type="text" autocomplete="off" class="layui-input" value="0"/>
+					</td>
+					<td class="bg-eee">客户名称:</td>
+					<td>
+						<input  id="customerName" name="customerName" type="text"  required  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">地区:</td>
+					<td>
+						<select id="city" name="city" lay-verify="required">
+							<option>北京市</option>
+							<option>天津市</option>
+							<option>河北省</option>
+							<option>山西省</option>
+							<option>内蒙古自治区</option>
+							<option>辽宁省</option>
+							<option>吉林省</option>
+							<option>黑龙江省</option>
+							<option>上海市</option>
+							<option>江苏省</option>
+							<option>浙江省</option>
+							<option>安徽省</option>
+							<option>福建省</option>
+							<option>江西省</option>
+							<option>山东省</option>
+							<option>河南省</option>
+							<option>湖北省</option>
+							<option>湖南省</option>
+							<option>广东省</option>
+							<option>广西壮族自治区</option>
+							<option>海南省</option>
+							<option>重庆市</option>
+							<option>四川省</option>
+							<option>贵州省</option>
+							<option>云南省</option>
+							<option>西藏自治区</option>
+							<option>陕西省</option>
+							<option>甘肃省</option>
+							<option>青海省</option>
+							<option>宁夏回族自治区</option>
+							<option>新疆维吾尔自治区</option>
+							<option>台湾省</option>
+							<option>香港特别行政区</option>
+							<option>澳门特别行政区</option>
+
+						</select>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">客户经理:</td>
+					<td>
+						<select id="customerMgr" name="customerMgr" lay-verify="required">
+						</select>
+						<span>*</span>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="bg-eee">客户等级:</td>
+					<td>
+						<select id="customerGrade" name="customerGrade" lay-verify="required">
+						</select>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">客户满意度:</td>
+					<td>
+						<select id="customerSatisfaction" name="customerSatisfaction" lay-verify="required">
+							<option value="☆☆☆☆☆">☆☆☆☆☆</option>
+							<option value="☆☆☆☆">☆☆☆☆</option>
+							<option value="☆☆☆">☆☆☆</option>
+							<option value="☆☆">☆☆</option>
+							<option value="☆">☆</option>
+						</select>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">客户信用度:</td>
+					<td>
+						<select id="customerCredit" name="customerCredit" lay-verify="required">
+							<option value="☆☆☆☆☆">☆☆☆☆☆</option>
+							<option value="☆☆☆☆">☆☆☆☆</option>
+							<option value="☆☆☆">☆☆☆</option>
+							<option value="☆☆">☆☆</option>
+							<option value="☆">☆</option>
+						</select>
+						<span>*</span>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<table class="myTable">
+				<colgroup>
+					<col width="20%">
+					<col width="30%">
+					<col width="20%">
+					<col width="30%">
+				</colgroup>
+				<tbody>
+				<tr>
+					<td class="bg-eee">地址:</td>
+					<td><input id="address" name="address"  type="text" required  lay-verify="required" placeholder="请输入客户地址" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">邮政编码:</td>
+					<td>
+						<input id="postalCode" name="postalCode" type="number" required  lay-verify="required|number" placeholder="请输入邮政编码" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">电话:</td>
+					<td>
+						<input id="phone" name="phone" type="number" required  lay-verify="required|number" placeholder="电话" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">传真:</td>
+					<td>
+						<input id="fax" name="fax" type="text" required  lay-verify="fax" placeholder="请输入客户传真" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">网址:</td>
+					<td>
+						<input id="ulr" name="ulr" type="text"  required  lay-verify="required|url" placeholder="网址：http://xxxxx.com" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">
+					</td>
+					<td>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+			<table class="myTable">
+				<colgroup>
+					<col width="20%">
+					<col width="30%">
+					<col width="20%">
+					<col width="30%">
+				</colgroup>
+				<tbody>
+				<tr>
+					<td class="bg-eee">营业执照注册号:</td>
+					<td><input id="businessLicense" name="businessLicense" type="number" placeholder="请输入营业执照注册号" autocomplete="off" class="layui-input"/>
+					</td>
+					<td class="bg-eee">法人:</td>
+					<td>
+						<input ID="juridicalPerson" name="juridicalPerson" type="text"  required  lay-verify="required" placeholder="请输入法人名称" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">注册资金(万元):</td>
+					<td>
+						<input id="registeredCapital" name="registeredCapital" type="number" placeholder="请输入注册资金(万元)" autocomplete="off" class="layui-input"/>
+					</td>
+					<td class="bg-eee">年营业额(万元):</td>
+					<td>
+						<input id="annualSales"  name="annualSales"  type="number"  placeholder="请输入年营业额(万元)" autocomplete="off" class="layui-input"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">开户银行:</td>
+					<td>
+						<input id="depositBank" name="depositBank" type="text"  required  lay-verify="required" placeholder="请输入银行名称" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+					<td class="bg-eee">银行账号:</td>
+					<td>
+						<input id="bankAccount" name="bankAccount" type="number" required  lay-verify="number|required" placeholder="请输入银行账号" autocomplete="off" class="layui-input"/>
+						<span>*</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-eee">地税登记号:</td>
+					<td>
+						<input id="landTaxCode" name="landTaxCode" type="number" placeholder="请输入地税登记号" autocomplete="off" class="layui-input"/>
+					</td>
+					<td class="bg-eee">国税登记号:</td>
+					<td>
+						<input id="centralTax" name="centralTax" type="number" placeholder="请输入国税登记号" autocomplete="off" class="layui-input"/>
+					</td>
+				</tr>
+
+				</tbody>
+			</table>
+			</fieldset>
+			<button id="save-btn" class="layui-btn save-btn layui-btn-normal" lay-submit lay-filter="save-btn">
+				<i class="layui-icon">&#xe62f;</i>保存</button>
+
+		</form>
+
+	</div>
+	</body>
+	<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../static/js/customer/show.js" type="text/javascript" charset="utf-8"></script>
+</html>

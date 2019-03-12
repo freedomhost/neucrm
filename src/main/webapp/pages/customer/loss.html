@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户流失管理</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/costomer/loss.css" media="all"/>
+</head>
+<body class="childrenBody">
+<div>
+    <blockquote class="layui-elem-quote">
+
+        <form id="loss" class="layui-form" action="">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label layui-bg-blue">客户</label>
+                <div class="layui-input-inline">
+                    <input type="search" name="customer" autocomplete="off" class="layui-input" placeholder="请输入客户">
+                </div>
+                <label class="layui-form-label layui-bg-blue">客户经理</label>
+                <div class="layui-input-inline">
+                    <input type="search" name="manager" autocomplete="off" class="layui-input" placeholder="请输入客户经理">
+                </div>
+                <label class="layui-form-label layui-bg-blue">状态</label>
+                <div class="layui-input-inline">
+                    <select  name="status">
+                        <option></option>
+                        <option value="0">暂缓流失</option>
+                        <option value="1">确认流失</option>
+                        <option value="2">流失预警</option>
+                    </select>
+                </div>
+                <div class="layui-input-inline">
+                    <button class="layui-btn layui-btn-normal" lay-submit lay-filter="search">
+                        <i class="layui-icon">&#xe615;</i>查询</button>
+                    <a href="help.html" class="layui-btn layui-btn-primary fr" target="_blank">
+                        <i class="layui-icon">&#xe607;</i>帮助</a>
+                </div>
+            </div>
+        </form>
+    </blockquote>
+    <table id="list" class="layui-table" lay-filter="list"></table>
+</div>
+</body>
+<script type="text/html" id="lossTool">
+    <button  class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit-btn"><i class="layui-icon">&#xe642;</i>追加</button>
+    <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="tem-loss"><i class="layui-icon">&#xe756;</i>暂缓</button>
+    <button class="layui-btn layui-btn-xs layui-btn-normal" lay-event="min-loss"><i class="layui-icon">&#xe671;</i>详细</button>
+</script>
+<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/customer/loss.js" type="text/javascript" charset="utf-8"></script>
+</html>

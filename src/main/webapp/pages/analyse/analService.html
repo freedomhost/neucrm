@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="loginHtml">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+</head>
+<body>
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-inline">
+            <b>年份</b>
+            <div class="layui-input-inline">
+                <input type="text" name="year" autocomplete="off" placeholder="全部" class="layui-input" />
+            </div>
+        </div>
+        <div class="layui-inline">
+            <a class="layui-btn" lay-submit lay-filter="search">查询</a>
+        </div>
+    </form>
+</blockquote>
+<table id="analServiceList" lay-filter="analServiceList"></table>
+<script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+<script type="text/javascript" src="../../static/js/analyse/analService.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.ServiceUserAllotMapper">
+    <select id="servicePage" resultType="com.neusoft.entity.vo.ServiceUserAllotVo">
+        select
+        outline,customer_name,customer_id,m.status,service_req,creation_id,m.creation_name,creation_time,service_type,
+        u.id,u.service_id,u.user_id,u.allot_time,u.service_handle,u.handle_name,u.handle_time,u.handle_result,u.satisfaction,
+        d.title service_Type_Title,
+        a.title status_title,
+        s.name user_id_name
+        from  service_management m
+        join service_user_allot u on  m.id=u.service_id
+        join data_dict d on d.value=m.service_type and d.type='服务类型'
+        join data_dict a on a.value=m.status and a.type='服务管理状态' and m.status=3
+        join system_user s on  s.id = u.user_id
+
+
+        <if test="search!=null">
+            WHERE u.id LIKE '%${search}%' OR
+            customer_name LIKE '%${search}%' OR
+            d.title LIKE '%${search}%' OR
+            s.name LIKE '%${search}%' OR
+            m.creation_name LIKE '%${search}%'
+
+        </if>
+    </select>
+</mapper>

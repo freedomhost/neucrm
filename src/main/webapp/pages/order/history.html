@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史订单</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/order/history.css" media="all" />
+</head>
+<body class="childrenBody">
+<div class="show">
+    <blockquote class="layui-elem-quote">
+       <h2> 历史订单</h2>
+        <button id="return-btn" class="layui-btn layui-btn-primary">
+            <i class="layui-icon">&#xe65c;</i>返回</button>
+        <a href="help.html" class="layui-btn layui-btn-primary fr" id="help" target="_blank">
+            <i class="layui-icon">&#xe607;</i>帮助</a>
+    </blockquote>
+    <table class="layui-table">
+        <tbody>
+        <colgroup>
+            <col width="20%">
+            <col width="30%">
+            <col width="20%">
+            <col width="30%">
+        </colgroup>
+        <tr>
+            <td class="bg-eee">客户编号</td>
+            <td><input id="customerId" readonly type="text"  class="layui-input" value="0"/>
+            </td>
+            <td class="bg-eee">客户名称</td>
+            <td><input id="customerName" readonly type="text" class="layui-input" value="FFFFFF"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table id="list" class="layui-table" lay-filter="list"></table>
+</div>
+</body>
+<script type="text/html" id="orderTool">
+    <button  class="layui-btn layui-btn-xs layui-btn-normal" lay-event="show-btn"><i class="layui-icon">&#xe642;</i>详细信息</button>
+</script>
+<script src="../../static/commons/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/order/history.js" type="text/javascript" charset="utf-8"></script>
+</html>

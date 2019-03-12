@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.AnalContributionMapper">
+
+    <select id="analContributionPage" resultType="com.neusoft.entity.vo.AnalContributionVo">
+        SELECT order_history.id,customer_info.customer_name,order_history.order_time,sum(order_info.money)AS amount FROM order_info,order_history,customer_info
+        <where>
+            order_history.id = order_info.order_id AND order_history.customer_id = customer_info.customer_id
+            <if test="customerName !=null and customerName !=''">
+                AND customer_info.customer_name LIKE '%${customerName}%'
+            </if>
+            <if test="year !=null and year !=''">
+                AND  YEAR(order_history.order_time) = #{year}
+            </if>
+        </where>
+        GROUP BY customer_info.customer_name
+
+    </select>
+</mapper>

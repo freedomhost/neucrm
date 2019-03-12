@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.AnalServiceMapper">
+
+    <select id="analServicePage" resultType="com.neusoft.entity.vo.AnalServiceVo">
+       <!-- SELECT id,service_type,creation_time,count(1) AS number FROM service_management
+        <where>
+            <if test="year !=null and year != ''">
+                creation_time LIKE '${year}%'
+            </if>
+        </where>
+        GROUP BY service_type-->
+
+        SELECT d.type,d.title AS service_type,YEAR(s.creation_time) AS year, COUNT(s.service_type) AS number
+        FROM (SELECT * FROM data_dict WHERE type='服务类型') as d
+        LEFT JOIN service_management s
+        ON d.`value` = s.service_type
+        <where>
+            <if test="year !=null and year != ''">
+                YEAR(s.creation_time) = #{year}
+            </if>
+        </where>
+        GROUP BY d.`value`
+
+
+
+
+
+
+    </select>
+</mapper>

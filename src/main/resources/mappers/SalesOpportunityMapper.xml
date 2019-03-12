@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.SalesOpportunityMapper">
+    <select id="userPage" resultType="com.neusoft.entity.SalesOpportunity">
+        SELECT * FROM sales_opportunity
+        <where>
+            <if test="saop.name != null and saop.name != ''">
+                name LIKE '%${saop.name}%'
+            </if>
+            <if test="saop.outline != null and saop.outline != ''">
+                AND outline LIKE '%${saop.outline}%'
+            </if>
+            <if test="saop.contacts != null and saop.contacts != ''">
+                AND contacts LIKE '%${saop.contacts}%'
+            </if>
+        </where>
+    </select>
+
+</mapper>

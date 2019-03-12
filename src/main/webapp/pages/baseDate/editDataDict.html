@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/css/public.css">
+</head>
+<body>
+    <div class="layui-container" style="margin-top:40px;margin-left: 40px;">
+        <form class="layui-form  layui-form-pane" action="" id="DDForm">
+            <div class="layui-fluid">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">类型</label>
+                        <div class="layui-input-inline">
+                            <input id="id" name="id" hidden>
+                            <input class="layui-input" type="text" name="type" id="type">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">条目</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" type="text" name="title" id="title">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">值</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" type="text" name="value" id="value" lay-verify="number">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item" pane style="width: 300px">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">是否可编辑</label>
+                        <div class="layui-input-inline">
+                            <input type="radio" name="status" value="0" title="是" checked="">
+                            <input type="radio" name="status" value="1" title="否">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="dataDict">确定修改</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+<!--    <blockquote class="layui-elem-quote">
+    </blockquote>
+    <div class="layui-container">
+        <form class="layui-form layui-form-pane" action="" id="DDForm">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <input id="id" name="id" hidden>
+                    <label class="layui-form-label">类型</label>
+                    <div class="layui-inline">
+                        <input class="layui-input" type="text" name="type" id="type">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">条目</label>
+                    <div class="layui-inline">
+                        <input class="layui-input" type="text" name="title" id="title">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">值</label>
+                    <div class="layui-inline">
+                        <input class="layui-input" type="text" name="value" id="value">
+                    </div>
+                </div>
+            </div>
+            &lt;!&ndash;<div class="layui-form-item">
+                <div class="layui-inline" pane="">
+                    <label class="layui-form-label">是否可编辑</label>
+                    <div class="layui-inline">
+                        <input type="radio" name="status" value="0" title="可编辑">
+                        <input type="radio" name="status" value="1" title="不可编辑">
+                    </div>
+                </div>
+            </div>&ndash;&gt;
+            &lt;!&ndash; <div class="layui-form-item" pane="" lay-filter="filter2">
+                 <div class="layui-inline" pane="">
+                     <label class="layui-form-label">单选框</label>
+                     <div class="layui-input-block">
+                         <input type="radio" name="1" value="男" title="男" checked="">
+                         <input type="radio" name="sex" value="女" title="女">
+                     </div>
+                 </div>
+             </div>&ndash;&gt;
+        </form>
+    </div>-->
+    <script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+    <script type="text/javascript" src="../../static/js/baseDate/editDataDict.js"></script>
+    <script>
+        layui.use(['form','jquery','table','layer'],function(){
+            let form = layui.form,
+                $ = layui.jquery,
+                table = layui.table,
+                layer = layui.layer;
+            form.render('select', 'filter2'); //更新 lay-filter="filter2"
+        });
+    </script>
+</body>
+</html>

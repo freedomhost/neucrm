@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户列表</title>
+    <link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="../../static/css/public.css" media="all" />
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote">
+    <form action="" class="layui-form">
+        <div class="layui-input-inline">
+            <input type="search" placeholder="请输入查询条件" autocomplete="off" required lay-verify="required" name="search" class="layui-input" />
+        </div>
+        <div class="layui-input-inline">
+            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="search">
+                <i class="layui-icon">&#xe615;</i>查询</button>
+            <button id="refur" type="reset" class="layui-btn layui-btn-primary">
+                <i class="layui-icon">&#xe666;</i>刷新</button>
+        </div>
+    </form>
+</blockquote>
+
+<table id="userList" lay-filter="userList"></table>
+<script type="text/html" id="userTool">
+    <button  class="layui-btn layui-btn-xs layui-btn-warm" lay-event="show-btn">归档查询</button>
+</script>
+
+<script type="text/javascript"  src="../../static/commons/layui/layui.js"></script>
+<script type="text/javascript"  src="../../static/js/service/service2.js"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

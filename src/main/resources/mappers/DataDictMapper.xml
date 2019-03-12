@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.DataDictMapper">
+
+    <select id="dataDictPage" resultType="com.neusoft.entity.DataDict">
+        SELECT * FROM data_dict
+        <where>
+            <if test="dataDict.type != null and dataDict.type != ''">
+                type LIKE '%${dataDict.type}%'
+            </if>
+            <if test="dataDict.title != null and dataDict.title != ''">
+                OR title LIKE '%${dataDict.title}%'
+            </if>
+            <if test="dataDict.value != null and dataDict.value != ''">
+                OR value LIKE '%${dataDict.value}%'
+            </if>
+        </where>
+    </select>
+
+ <select id="getDataDict" resultType="com.neusoft.entity.DataDict">
+        SELECT * FROM data_dict
+        <where>
+            <if test="dataDict.type != null and dataDict.type != ''">
+                type ='${dataDict.type}' AND value = ${dataDict.value}
+            </if>
+
+        </where>
+    </select>
+
+
+</mapper>

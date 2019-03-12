@@ -1,0 +1,31 @@
+<html>
+<head>
+    <base href="<%=basePath%>"/>
+    <title>用户编辑</title>
+    <link rel="stylesheet" href="/static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/css/public.css" media="all" />
+</head>
+<body class="childrenBody padr30">
+<form class="layui-form" action="" id="market4_edit">
+    <h1>
+        你确定开发【<font color="red">成功</font>】吗？
+    </h1>
+    <input id="customerName" name="customerName" readonly type="hidden" autocomplete="off" class="layui-input"/>
+    <input id="city" name="city" type="hidden" autocomplete="off" class="layui-input" value="中国"/>
+    <input type="hidden" id="customerMgr" name="customerMgr" required  lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="customerMgrId" name="customerMgrId" required  lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="customerGrade" name="customerGrade" value="普通客户" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="customerSatisfaction" value="☆☆☆" name="customerSatisfaction" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="customerCredit" value="☆☆☆" name="customerCredit" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="address" value="" name="address" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="postalCode" value="" name="postalCode" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="phone" value="0000000000" name="phone" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="fax" name="fax" lay-verify="required" autocomplete="off" class="layui-input" />
+    <!--<input type="hidden" id="contacts" name="contacts" lay-verify="required" autocomplete="off" class="layui-input" />
+    <input type="hidden" id="contactsTel" name="contactsTel" lay-verify="required" autocomplete="off" class="layui-input" />-->
+</form>
+<script type="text/javascript" src="/static/commons/layui/layui.js"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

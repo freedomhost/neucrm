@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../static/commons/layui/css/layui.css" media="all"/>
+		<link rel="stylesheet" href="../../static/css/public.css" />
+		<link rel="stylesheet" href="../../static/css/sale/list.css"  />
+	</head>
+	<body>
+
+		<div id="div1">
+			<button id="btn1">帮助</button>
+			<button id="btn2">新建</button>
+			<button id="btn3">查询</button>
+	    <div>
+	    
+   	    <div id="div2">
+   	        <form action="" method="post" id="search">
+   	    		<table lay-skin="line" id="table2" border="1px"> 
+   	    			<tr id="tr2">
+   	    				<td>客户名称</td>
+   	    				<td><input type="text" name="name"  autocomplete="off"/></td>
+   	    		
+   	    				<td>概要</td>
+   	    				<td><input type="text" name="outline"  autocomplete="off"/></td>
+   	    		
+   	    				<td>联系人</td>
+   	    			    <td><input type="text" name="contacts"  autocomplete="off"/></td>
+   	    			</tr>
+   	    		</table>	
+   	    	</form>
+   	    </div>
+   	    
+   	    <div id="div3">
+   	       <table id="userList" lay-filter="userList"></table>
+			<script type="text/html" id="userTool">
+				{{#  if(d.status == '1'){ }}
+					<a class="layui-btn  layui-btn-xs" lay-event="assign_btn" style="background-color: grey;">指派</a>
+					<a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit_btn" style="background-color: grey;">编辑</a>
+					<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del_btn" style="background-color: grey;">删除</a>
+				{{#  } else{ }}
+					<a class="layui-btn  layui-btn-xs" lay-event="assign_btn">指派</a>
+					<a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit_btn">编辑</a>
+					<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del_btn">删除</a>
+				{{#  } }}
+
+
+			</script>
+
+		    <script type="text/javascript" src="../../static/commons/layui/layui.js"></script>
+			<script type="text/javascript" src="../../static/js/sale/list.js"></script>
+			<script type="text/javascript" src="../../static/js/sale/efficiency.js"></script>
+   	    </div>
+	</body>
+</html>

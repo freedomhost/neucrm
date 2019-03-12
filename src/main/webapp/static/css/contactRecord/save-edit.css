@@ -1,0 +1,26 @@
+.save-btn {
+    margin: 10px 45%;
+}
+#id {
+    display: none;
+}
+
+td span {
+    font-size: 20px;
+    color: red;
+    border-left:1px solid #eee!important;
+}
+
+/*去掉谷歌,火狐下的type="number"中的右边箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+input[type="number"]{-moz-appearance:textfield;}
+
+.layui-input {
+    border:0px solid #fff!important;
+    width: 93%;
+    display: inline-block;
+}
+

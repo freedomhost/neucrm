@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mapper.StockMapper">
+
+    <select id="stockPage" resultType="com.neusoft.entity.Stock">
+        select * from stock
+        <where>
+            <if test="stock.productName !=null and stock.productname !=''">
+                product_name LIKE '%${stock.productName}%'
+            </if>
+            <if test="stock.warehouse !=null and stock.warehouse !=''">
+                OR warehouse LIKE '%${stock.warehouse}%'
+            </if>
+        </where>
+    </select>
+</mapper>

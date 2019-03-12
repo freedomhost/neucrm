@@ -1,0 +1,33 @@
+<html>
+<head>
+    <base href="<%=basePath%>"/>
+    <title>用户编辑</title>
+    <link rel="stylesheet" href="/static/commons/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/static/css/public.css" media="all" />
+</head>
+<body class="childrenBody padr30">
+<form class="layui-form" action="" id="market3_edit">
+    <div class="layui-form-item">
+        <label class="layui-form-label">计划项编号</label>
+        <div class="layui-input-block">
+            <input id="id" name="id" readonly type="text" autocomplete="off" class="layui-input"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">客户编号</label>
+        <div class="layui-input-block">
+            <input id="opportunityId" readonly name="opportunityId" type="text" autocomplete="off" class="layui-input"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">执行效果</label>
+        <div class="layui-input-block">
+            <input type="text" id="result" name="result" required  lay-verify="required" autocomplete="off" class="layui-input" />
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="/static/commons/layui/layui.js"></script>
+<script src="../../static/js/base64.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/myTool.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
